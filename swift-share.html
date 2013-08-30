@@ -1,17 +1,25 @@
 <!doctype html>
-<html>
+
+<html ng-app='swift' ng-csp>
 <head>
 	<title>Swift Share</title>
 </head>
 
 <body>
 
-<div id="content">
-Loading...
+<div id="content" ng-controller="AppController">
+	<div>Header</div>
+	<a href="#">Welcome</a>
+	<a href="#login">Login</a>
+	<a href="#containers">Containers</a>
+	{{$route.current.template}}
+	<div ng-view>></div>
+	<div>Footer here!</div>
 </div>
 
 <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="js/knockout-2.3.0.debug.js"></script>
+<script type="text/javascript" src="js/angular.js"></script>
+<script type="text/javascript" src="js/angular-sanitize.js"></script>
 <script type="text/javascript" src="js/swift-share.js"></script>
 
 </body>
